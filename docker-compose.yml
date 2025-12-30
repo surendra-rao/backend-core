@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend-core
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend-core/static:/app/static # Persist videos
+  frontend:
+    build: ./frontend-core
+    ports:
+      - "3000:3000"
